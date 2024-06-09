@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 73</title>
+</head>
+<body>
+    <h1>Encuesta </h1>
+    <form action="/procesar-encuesta" method="POST">
+        <h2>¿Cuál es tu color favorito?</h2>
+        <label><input type="checkbox" name="color" value="Rojo"> Rojo</label><br>
+        <label><input type="checkbox" name="color" value="Azul"> Azul</label><br>
+        <label><input type="checkbox" name="color" value="Verde"> Verde</label><br>
+        <label><input type="checkbox" name="color" value="Amarillo"> Amarillo</label><br>
+        <label><input type="checkbox" name="color" value="Negro"> Negro</label><br>
+        <label><input type="checkbox" name="color" value="Blanco"> Blanco</label><br>
+        <label><input type="checkbox" name="color" value="Otro"> Otro</label><br><br>
+        
+        <h2>¿Cuál es tu animal favorito?</h2>
+        <label for="animal">Selecciona uno:</label>
+        <select id="animal" name="animal" required>
+            <option value="">Seleccione</option>
+            <option value="Perro">Perro</option>
+            <option value="Gato">Gato</option>
+            <option value="Pájaro">Pájaro</option>
+            <option value="Pez">Pez</option>
+            <option value="Caballo">Caballo</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

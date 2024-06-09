@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de imágenes</title>
+  <style>
+    #imageContainer {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .image-item {
+      width: 300px;
+      height: 200px;
+      border: 1px solid #ccc;
+      margin: 10px;
+      position: relative; 
+    }
+
+    .image-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s ease;
+    }
+
+    
+    .image-item .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 3s ease;
+    }
+
+    .image-item:hover .image-overlay {
+      opacity: 1; 
+    }
+
+    .image-item .image-overlay img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .image-item:hover .image-overlay img {
+      transform: translateX(0);
+    }
+  </style>
+</head>
+<body>
+  <div id="imageContainer">
+    <div class="image-item">
+      <img src="fotos/11.jpeg" alt="Imagen 1 - Opción 1" class="image-visible">
+      <img src="fotos/1.jpeg" alt="Imagen 1 - Opción 2" class="image-overlay">
+      <img src="fotos/1.png" alt="Imagen 1 - Opción 3" class="image-overlay">
+    </div>
+
+    <div class="image-item">
+      <img src="fotos/14.jpg" alt="Imagen 2 - Opción 1" class="image-visible">
+      <img src="fotos/7.jpeg" alt="Imagen 2 - Opción 2" class="image-overlay">
+      <img src="fotos/7.jpeg" alt="Imagen 2 - Opción 3" class="image-overlay">
+    </div>
+
+    <div class="image-item">
+      <img src="fotos/12.jpeg" alt="Imagen 3 - Opción 1" class="image-visible">
+      <img src="fotos/targeta madre.jpg" alt="Imagen 3 - Opción 2" class="image-overlay">
+      <img src="fotos/14.jpg" alt="Imagen 3 - Opción 3" class="image-overlay">
+    </div>
+  </div>
+</body>
+</html>

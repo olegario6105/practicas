@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica 71</title>
+</head>
+<body>
+    <h1>comprar un producto</h1>
+    <form action="/procesar-compra" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        
+        <label for="address">Dirección:</label>
+        <input type="text" id="address" name="address" required>
+        <br><br>
+        
+        <label for="product">Nombre del Producto:</label>
+        <input type="text" id="product" name="product" required>
+        <br><br>
+        
+        <label for="quantity">Cantidad:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+        <br><br>
+        
+        <input type="submit" value="Comprar">
+        <input type="reset" value="Cancelar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teclado</title>
+  <style>
+    .teclado {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #ccc;
+      width: 900px;
+      height: 500px;
+      margin: 0 auto;
+    }
+    .div-click {
+      width: 50px;
+      height: 50px;
+      background-color: #ccc;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    #miImagen {
+      position: absolute;
+      top: 100%;
+      left: 30%;
+      width: 50%;
+      height: 50%;
+      display: none;
+    }
+  </style>
+</head>
+<body bgcolor="black">
+  <h1><center><font color="red">xd</font></center></h1>
+
+  <div class="teclado">
+    <div id="v1" class="div-click">1</div>
+    <div id="v2" class="div-click">2</div>
+    <div id="v3" class="div-click">3</div>
+    <div id="v4" class="div-click">4</div>
+    <div id="v5" class="div-click">5</div>
+    <div id="v6" class="div-click">6</div>
+    <div id="v7" class="div-click">7</div>
+    <div id="v8" class="div-click">8</div>
+
+    <div id="v9" class="div-click">9</div>
+    <div id="v10" class="div-click">0</div>
+    <div id="v11" class="div-click">A</div>
+    <div id="v12" class="div-click">B</div>
+    <div id="v13" class="div-click">C</div>
+    <div id="v14" class="div-click">E</div>
+    <div id="v15" class="div-click">F</div>
+    <div id="v16" class="div-click">G</div>
+
+    <div id="v17" class="div-click">H</div>
+    <div id="v18" class="div-click">I</div>
+    <div id="v19" class="div-click">J</div>
+    <div id="v20" class="div-click">K</div>
+    <div id="v21" class="div-click">L</div>
+    <div id="v22" class="div-click">M</div>
+    <div id="v23" class="div-click">N</div>
+    <div id="v24" class="div-click">O</div>
+
+    <div id="v25" class="div-click">P</div>
+    <div id="v26" class="div-click">Q</div>
+    <div id="v27" class="div-click">R</div>
+    <div id="v28" class="div-click">S</div>
+    <div id="v29" class="div-click">T</div>
+    <div id="v30" class="div-click">W</div>
+    <div id="v31" class="div-click">X</div>
+    <div id="v32" class="div-click">Y</div>
+
+    <div id="v33" class="div-click">Z</div>
+    
+
+    
+    <img id="Imagen" src="fotos/10.jpeg" alt="Imagen" >
+  </div>
+
+  <script>
+    const miDivs = document.querySelectorAll('.div-click');
+    const miImagen = document.getElementById('Imagen');
+
+    const imagenes = {
+      'v1': 'fotos/numero1.jpg',
+      'v2': 'fotos/numero2.jpg',
+      'v3': 'fotos/numero3.jpg',
+      'v4': 'fotos/numero4.jpg',
+      'v5': 'fotos/numero5.jpg',
+      'v6': 'fotos/numero6.jpg',
+      'v7': 'fotos/numero7.jpg',
+      'v8': 'fotos/numero8.jpg',
+      'v9': 'fotos/numero9.jpg',
+      'v10': 'fotos/numero0 .jpg',
+      'v11': 'fotos/a.jpg',
+      'v12': 'fotos/b.jpg',
+      'v13': 'fotos/c.jpg',
+      'v14': 'fotos/e.jpg',
+      'v15': 'fotos/f.jpg',
+      'v16': 'fotos/g.jpg',
+      'v17': 'fotos/h.jpg',
+      'v18': 'fotos/i.jpg',
+      'v19': 'fotos/j.jpg',
+      'v20': 'fotos/k.jpg',
+      'v21': 'fotos/L.jpg',
+      'v22': 'fotos/m.jpg',
+      'v23': 'fotos/n.jpg',
+      'v24': 'fotos/o.jpg',
+      'v25': 'fotos/p.jpg',
+      'v26': 'fotos/q.jpg',
+      'v27': 'fotos/r.jpg',
+      'v28': 'fotos/s.jpg',
+      'v29': 'fotos/t.jpg',
+      'v30': 'fotos/w.jpg',
+      'v31': 'fotos/x.jpg',
+      'v32': 'fotos/y.jpg',
+      'v33': 'fotos/z.jpg',
+    
+      
+    };
+
+    for (const miDiv of miDivs) {
+      miDiv.addEventListener('click', () => {
+        const divId = miDiv.id;
+        const imagenURL = imagenes[divId];
+        if (imagenURL) {
+          miImagen.src = imagenURL;
+          miImagen.style.display = 'block';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

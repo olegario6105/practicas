@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoción UNAM</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .promo-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+        input[type="reset"], input[type="button"] {
+            width: auto;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Promoción de la UNAM</h1>
+        <p class="promo-text">¡Inscríbete ahora en la Universidad Nacional Autónoma de México y recibe una educación de calidad con los mejores profesores y recursos! Aprovecha nuestras promociones especiales y sé parte de una de las mejores universidades de Latinoamérica.</p>
+        <form action="/procesar-interes" method="POST">
+            <p>¿Estás interesado en esta promoción?</p>
+            <input type="submit" name="interes" value="Sí">
+            <input type="button" name="interes" value="No" onclick="alert('Gracias por tu respuesta!');">
+        </form>
+    </div>
+</body>
+</html>
